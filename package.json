@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "description": "archetypes.napplet.run and the indexer that feeds it.",
+  "license": "MIT",
   "scripts": {
     "build": "pnpm --filter @napplet/archetypes build",
     "check:site": "pnpm --filter @napplet/archetypes check:site",

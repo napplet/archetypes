@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "description": "Relay-scoring crawler and SQLite event store that feeds the archetypes.napplet.run static build.",
+  "license": "MIT",
   "type": "module",
   "engines": {
     "node": ">=24"
