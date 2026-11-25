@@ -9,7 +9,7 @@ const decided = index.clusters.filter(cluster => cluster.status !== 'candidate')
 ---
 <Base title="Synonym clusters" description={`Napplet archetypes that may name the same thing: ${open.length} open clusters for human review, ${decided.length} decided.`} nav="clusters" markdown="/clusters/index.md">
   <h1 style="margin: 0 0 8px; font-size: 36px;">Synonym clusters</h1>
-  <p class="lede">Groups of archetype names that may mean the same thing. The site suggests them from names, publishers, parameters and descriptions; only a reviewed edit to <a href="https://github.com/napplet/web/blob/main/apps/archetypes/curation.yaml">curation.yaml</a> settles one. A napplet advertising two names marks them as different facets, so such pairs are never suggested.</p>
+  <p class="lede">Groups of archetype names that may mean the same thing. The site suggests them from names, publishers, parameters and descriptions; only a reviewed edit to <a href="https://github.com/napplet/archetypes/blob/main/site/curation.yaml">curation.yaml</a> settles one. A napplet advertising two names marks them as different facets, so such pairs are never suggested.</p>
   <section class="section" aria-labelledby="open-h">
     <h2 id="open-h">Needs review ({open.length})</h2>
     {open.length ? (

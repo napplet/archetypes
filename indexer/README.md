@@ -1,6 +1,6 @@
 # @napplet/archetypes-indexer
 
-The data side of [archetypes.napplet.run](https://archetypes.napplet.run). One long-running Node service finds relays, crawls them for napplet manifests, keeps the signed events in SQLite, and once a day builds the [archetypes site](../archetypes) from that store and uploads it to Bunny Storage.
+The data side of [archetypes.napplet.run](https://archetypes.napplet.run). One long-running Node service finds relays, crawls them for napplet manifests, keeps the signed events in SQLite, and once a day builds the [archetypes site](../site) from that store and uploads it to Bunny Storage.
 
 It reads and stores events. It never publishes to relays and adds no protocol surface: manifests are NIP-5D kinds 5129, 15129 and 35129 ([nostr-protocol/nips#2303](https://github.com/nostr-protocol/nips/pull/2303)), and relay discovery uses NIP-66 kind 30166 events.
 
@@ -20,17 +20,17 @@ Node 24 runs the TypeScript sources directly.
 pnpm install
 pnpm --filter @napplet/archetypes-indexer start     # forever
 pnpm --filter @napplet/archetypes-indexer once      # one tick, then exit
-node apps/archetypes-indexer/src/main.ts --build    # export, build and deploy now
+node indexer/src/main.ts --build                # export, build and deploy now
 ```
 
 Or with Docker, from the repository root:
 
 ```bash
-docker build -f apps/archetypes-indexer/Dockerfile -t archetypes-indexer .
+docker build -t archetypes-indexer .
 docker run -v archetypes-data:/data -e BUNNY_STORAGE_ZONE=… -e BUNNY_STORAGE_PASSWORD=… archetypes-indexer
 ```
 
-[`compose.yaml`](compose.yaml) runs the same image with a named data volume. Its build context defaults to the repository root as seen from this directory (`../..`); a deployment tool that runs compose with `--project-directory` at the repository root should set `ARCHETYPES_BUILD_CONTEXT=.` at build time. The container listens on port 8080: `/healthz` returns 200 while ticks keep finishing, and `/status` reports counts, timings and the top-scored relays.
+The root [`compose.yaml`](../compose.yaml) runs the same image with a named data volume. The container listens on port 8080: `/healthz` returns 200 while ticks keep finishing, and `/status` reports counts, timings and the top-scored relays.
 
 ## Configure
 

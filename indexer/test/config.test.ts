@@ -51,7 +51,7 @@ describe('configFromEnv', () => {
     const config = configFromEnv({ ARCHETYPES_YAML: 'crawl:\n  concurrency: 5\n', ARCHETYPES_CONFIG: file, ARCHETYPES_DATA_DIR: '/tmp/arch-data' });
     expect(config.crawl.concurrency).toBe(5);
     expect(config.dataDir).toBe('/tmp/arch-data');
-    expect(config.build.siteDir).toMatch(/apps\/archetypes$/);
+    expect(config.build.siteDir).toMatch(/\/site$/);
     expect(configFromEnv({ ARCHETYPES_CONFIG: file }).crawl.concurrency).toBe(3);
     expect(configFromEnv({}).crawl.concurrency).toBe(DEFAULTS.crawl.concurrency);
   });

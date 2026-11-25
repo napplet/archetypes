@@ -1,0 +1,19 @@
+{
+  "name": "archetypes",
+  "private": true,
+  "type": "module",
+  "description": "archetypes.napplet.run and the indexer that feeds it.",
+  "scripts": {
+    "build": "pnpm --filter @napplet/archetypes build",
+    "check:site": "pnpm --filter @napplet/archetypes check:site",
+    "type-check": "pnpm -r type-check",
+    "test:unit": "pnpm -r test:unit",
+    "dev": "pnpm --filter @napplet/archetypes dev",
+    "seed": "pnpm --filter @napplet/archetypes seed",
+    "indexer": "pnpm --filter @napplet/archetypes-indexer start"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@10.8.0"
+}

@@ -82,8 +82,8 @@ const ld = (value: object) => JSON.stringify(value).replace(/</g, '\\u003c');
     </main>
     <footer class="site-footer">
       <div class="wrap">
-        <p>Non-normative. Archetypes (<code>z</code>) and intents (<code>i</code>) are tags in <a href="https://github.com/nostr-protocol/nips/pull/2303">NIP-5D</a> napplet manifests (kinds 5129, 15129, 35129); intent dispatch follows <a href="https://github.com/napplet/naps">NAP-INTENT</a>. Names are ad hoc and nothing here is a registry. Curation labels are editorial notes kept in <a href="https://github.com/napplet/web/blob/main/apps/archetypes/curation.yaml">this site’s repository</a>.</p>
-        <p>Built {day(index.generatedAt)} from {index.releases} signed manifests. <a href="/llms.txt">llms.txt</a> · <a href="/archetypes.json">archetypes.json</a> · <a href="/relays.json">relays.json</a> · <a href="https://napplet.run/">napplet.run</a> · <a href="https://github.com/napplet/web/tree/main/apps/archetypes">source</a></p>
+        <p>Non-normative. Archetypes (<code>z</code>) and intents (<code>i</code>) are tags in <a href="https://github.com/nostr-protocol/nips/pull/2303">NIP-5D</a> napplet manifests (kinds 5129, 15129, 35129); intent dispatch follows <a href="https://github.com/napplet/naps">NAP-INTENT</a>. Names are ad hoc and nothing here is a registry. Curation labels are editorial notes kept in <a href="https://github.com/napplet/archetypes/blob/main/site/curation.yaml">this site’s repository</a>.</p>
+        <p>Built {day(index.generatedAt)} from {index.releases} signed manifests. <a href="/llms.txt">llms.txt</a> · <a href="/archetypes.json">archetypes.json</a> · <a href="/relays.json">relays.json</a> · <a href="https://napplet.run/">napplet.run</a> · <a href="https://github.com/napplet/archetypes">source</a></p>
       </div>
     </footer>
     <script is:inline>if (navigator.modelContext) { const s = document.createElement('script'); s.src = '/webmcp.js'; document.head.append(s); }</script>

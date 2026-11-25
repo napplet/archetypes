@@ -6,7 +6,7 @@
 # archetypes.napplet.run, changed by pull request. It never changes what a
 # manifest means and is never published to relays.
 #
-# Every section is optional. See apps/archetypes/README.md for the full format.
+# Every section is optional. See site/README.md for the full format.
 
 # Tune the synonym-candidate heuristics. Defaults are shown; delete to use them.
 # similarity:

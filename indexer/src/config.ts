@@ -117,7 +117,7 @@ export const DEFAULTS: Config = {
   build: {
     enabled: true,
     at: '05:30',
-    siteDir: '../archetypes',
+    siteDir: '../site',
     siteUrl: 'https://archetypes.napplet.run',
     runtimeTopRelays: 6,
     runtimePinnedRelays: [],

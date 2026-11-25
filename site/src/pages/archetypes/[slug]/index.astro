@@ -70,7 +70,7 @@ const live = {
       {entry.note && (
         <div class="note" style="margin-top: 12px;">
           <strong>Curator note.</strong> {entry.note}
-          <div class="small dim" style="margin-top: 6px;">From <a href="https://github.com/napplet/web/blob/main/apps/archetypes/curation.yaml">curation.yaml</a>{entry.reviewed && <> · reviewed {entry.reviewed}</>} · edit by pull request</div>
+          <div class="small dim" style="margin-top: 6px;">From <a href="https://github.com/napplet/archetypes/blob/main/site/curation.yaml">curation.yaml</a>{entry.reviewed && <> · reviewed {entry.reviewed}</>} · edit by pull request</div>
         </div>
       )}
       {entry.status === 'candidate' && clusters.filter(cluster => cluster.status === 'candidate').map(cluster => (

@@ -230,7 +230,7 @@ export function clusterMarkdown(cluster: ClusterEntry, site: string): string {
     '',
     ...cluster.members.map(member => `- ${site}/archetypes/${member}/`),
     '',
-    'Decisions are recorded in apps/archetypes/curation.yaml in the napplet/web repository.',
+    'Decisions are recorded in site/curation.yaml in the napplet/archetypes repository.',
     '',
   ];
   return out.join('\n');

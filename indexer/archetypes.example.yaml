@@ -51,7 +51,7 @@ proxy:
 build:
   enabled: true
   at: "05:30"               # daily build time, UTC
-  siteDir: ../archetypes    # the Astro site package
+  siteDir: ../site          # the Astro site package
   siteUrl: https://archetypes.napplet.run
   runtimeTopRelays: 6       # best-scored relays browsers ask for newer manifests
   runtimePinnedRelays: []   # always handed to browsers as well
