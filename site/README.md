@@ -18,7 +18,7 @@ For agents: `/llms.txt`, `/llms-full.txt`, `/index.md`, `/archetypes/<slug>.md`,
 
 ## Data flow
 
-The daily build reads a snapshot of signed manifests. In production the [indexer](../indexer) writes it and passes `ARCHETYPES_SNAPSHOT`. Without that variable, the build uses the checked-in seed `src/data/snapshot.json`, so development and CI need no network. `pnpm seed` regenerates the seed from the relay data the napplet.run app store saves in [napplet/web](https://github.com/napplet/web/tree/main/apps/web/src/data). It fetches those files from GitHub; `pnpm seed <dir>` reads a local copy of that directory instead.
+The daily build reads a snapshot of signed manifests. In production the [indexer](../indexer) writes it and passes `ARCHETYPES_SNAPSHOT`. Without that variable, the build uses the checked-in seed `src/data/snapshot.json`, so development and CI need no network. `pnpm seed` regenerates the seed from the relay data the napplet.run app store saves in [napplet/web](https://github.com/napplet/web/tree/main/apps/web/src/data). It fetches those files from GitHub; `pnpm seed /absolute/path/to/apps/web/src/data` reads a local copy instead.
 
 In the browser, each page asks the relays the build ranked best for manifests newer than the build, verifies their signatures, and merges them in: a banner reports what changed, and new archetypes and napplets are marked until the next rebuild. Static content stays complete without JavaScript.
 
